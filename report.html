@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVID-19 Trends in Portugal</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">COVID-19 Portugal</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#overview">Overview</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#government-resp">Government Response</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#reproduction-rate">Reproduction Rate</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#health-care">Health Care & Prevention</a>
+                <li class="nav-item">
+                    <a class="nav-link" href="#trends">Trends</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="jumbotron text-center">
+        <h1 class="display-4">COVID-19 in Portugal</h1>
+        <p class="lead">A comprehensive overview of the COVID-19 pandemic trends and statistics in Portugal.</p>
+        <p class="image-source">Image source: <a href="https://www.kflaph.ca/en/health-topics/resources/Infections-and-infectious-diseases/Images/ib-COVID-19.jpg">kflaph.ca</a></p>
+    </header>
+    <section id="overview" class="container mt-5">
+    <div class="row">
+        <div class="col-lg-12">
+            <h2>Overview</h2>
+            <p>Tu dodać tekst kiedy wystąpił pierwszy przypadek covid i że prezentacja żeby nabrać kontekstu porówna wartości dla Polski</p>
+            <img src="./plots/1_total_cases_static.png" alt="Total Cases Chart">
+
+            <img src="./plots/1_cases_growth.gif" alt="Cases Growth Chart">
+            <ul class="nav nav-tabs" id="overviewTabs" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="new-cases-tab" data-toggle="tab" href="#new-cases" role="tab" aria-controls="new-cases" aria-selected="true">New Cases</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="deaths-tab" data-toggle="tab" href="#deaths" role="tab" aria-controls="deaths" aria-selected="false">Deaths</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="cases-deaths-corr-tab" data-toggle="tab" href="#cases-deaths-corr" role="tab" aria-controls="cases-deaths-corr" aria-selected="false">Cases-Deaths Correlation</a>
+                </li>
+            </ul>
+
+            <div class="tab-content" id="overviewTabsContent">
+                <div class="tab-pane fade show active" id="new-cases" role="tabpanel" aria-labelledby="new-cases-tab">
+                    <iframe src="./plots/2_new_cases_state_interactive.html" width="100%" frameborder="0" style="height:700px"></iframe>
+                    <p id="new-cases-comment">Your comment goes here...</p>
+                </div>
+                <div class="tab-pane fade" id="deaths" role="tabpanel" aria-labelledby="deaths-tab">
+                        <img src="./plots/3_deaths_vs_cases_one_axis.gif" alt="Cases Growth Chart" style="width: 100%; height: auto">
+                        <img src="./plots/3_deaths_vs_cases.gif" alt="Cases Growth Chart" style="width: 100%; height: auto">
+                    <p id="deaths-comment">Your comment goes here...</p>
+                </div>
+                <div class="tab-pane fade" id="cases-deaths-corr" role="tabpanel" aria-labelledby="cases-deaths-corr-tab">
+                    <img src="./plots/3_deaths_cases_correlation.png" alt="Total Cases Chart" style="width: 100%; height: auto">
+                    <p id="cases-deaths-corr-comment">Your comment goes here...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <section id="government-resp" class="container mt-5">
+         <div class="row">
+        <div class="col-lg-12">
+            <h2>Government response</h2>
+            <p>Here you can find the information about the government response to the COVID-19 pandemic in Portugal...</p>
+            <iframe src="./plots/4_government_response_interactive.html" width="100%" frameborder="0" style="height:700px"></iframe>
+            <p>Your comment goes here...</p>
+            <div class="row">
+                <div class="col-lg-6">
+                    <img src="./plots/4_government_response_static.png" alt="Total Cases Chart" style="width: 100%; height: auto">
+                </div>
+                <div class="col-lg-6">
+                    <img src="./plots/4_government_response_pl_static.png" alt="Cases Growth Chart" style="width: 100%; height: auto">
+                </div>
+            </div>
+           <p>Your comment goes here...</p>
+        </div>
+    </div>
+    </section>
+    <section id="reproduction-rate" class="container mt-5">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2>Reproduction Rate</h2>
+                <p>Here you can find the information about the reproduction rate of COVID-19 in Portugal...</p>
+                <iframe src="./plots/5_reproduction_rate_interactive.html" width="100%" frameborder="0" style="height:700px"></iframe>
+                <p>Your comment goes here...</p>
+            </div>
+        </div>
+    </section>
+    <section class="container mt-5">
+    <div class="row">
+        <div class="col-lg-12" id="health-care">
+            <h2>Health Care & Prevention</h2>
+            <p>Here you can find the information about the health care and prevention measures in Portugal...</p>
+            <p> </p>
+             <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" data-toggle="tab" href="#hospitals" role="tab" aria-controls="hospitals" aria-selected="true">Hospitals</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#tests" role="tab" aria-controls="tests" aria-selected="false">Tests</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#vaccination" role="tab" aria-controls="vaccination" aria-selected="false">Vaccination</a>
+                </li>
+            </ul>
+
+            <div class="tab-content">
+                <div class="tab-pane fade show active" role="tabpanel" id="hospitals" aria-labelledby="hospitals-tab">
+                    <iframe src="./plots/8_hospitals_interactive.html" width="100%" frameborder="0" style="height:700px"></iframe>
+                    <img src="./plots/8_hospitals_comparison_static.png" alt="Total Cases Chart" style="width: 100%; height: auto">
+                    <p>Your comment goes here...</p>
+                </div>
+                <div class="tab-pane fade" role="tabpanel" id="tests" aria-labelledby="tests-tab">
+                    <iframe src="./plots/6_tests.html" width="100%" frameborder="0" style="height:700px"></iframe>
+                    <img src="./plots/6_tests_correlation.png" alt="Cases Growth Chart" style="width: 100%; height: auto">
+                    <p>Your comment goes here...</p>
+                </div>
+                <div class="tab-pane fade" role="tabpanel" id="vaccination" aria-labelledby="vaccination-tab">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <img src="./plots/7_vaccinations_static.png" alt="Total Cases Chart" style="width: 100%; height: auto">
+                        </div>
+                        <div class="col-lg-6">
+                            <img src="./plots/7_vaccinations_comparison_static.png" alt="Cases Growth Chart" style="width: 100%; height: auto">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <img src="./plots/7_vaccinations_animation.gif" alt="Total Cases Chart" style="width: 100%; height: auto">
+                        </div>
+                        <div class="col-lg-6">
+                            <img src="./plots/7_vaccinations_pl_animation.gif" alt="Cases Growth Chart" style="width: 100%; height: auto">
+                        </div>
+                    </div>
+                    <p>Your comment goes here...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="trends" class="container mt-5">
+   <div class="row">
+        <div class="col-lg-12">
+                <h2>Trends</h2>
+                <p>This section presents the trends in COVID-19 cases, recoveries, and fatalities...</p>
+                <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" data-toggle="tab" href="#new-cases-pred" role="tab" aria-controls="new-cases-pred" aria-selected="true">New cases prediction</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#new-deaths-pred" role="tab" aria-controls="new-deaths-pred" aria-selected="false">New deaths prediction</a>
+                </li>
+                </ul>
+            </div>
+            <div class="tab-content">
+                <div class="tab-pane fade show active" role="tabpanel" id="new-cases-pred" aria-labelledby="new-cases-pred-tab">
+                    <iframe src="./plots/9_cases_forecast.html" width="1200px" frameborder="0" style="height:700px"></iframe>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <iframe src="./plots/9_cases_period1_forecast.html" width="600px" frameborder="0" style="height:500px"></iframe>
+                        </div>
+                        <div class="col-lg-6">
+                            <iframe src="./plots/9_cases_period2_forecast.html" width="600px" frameborder="0" style="height:500px"></iframe>
+                        </div>
+                    </div>
+                    <p>Your comment goes here...</p>
+                </div>
+                <div class="tab-pane fade" role="tabpanel" id="new-deaths-pred" aria-labelledby="new-deaths-pred-tab">
+                    <iframe src="./plots/9_deaths_forecast.html" width="100%" frameborder="0" style="height:700px"></iframe>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <iframe src="./plots/9_deaths_period1_forecast.html" width="600px" frameborder="0" style="height:500px"></iframe>
+                        </div>
+                        <div class="col-lg-6">
+                            <iframe src="./plots/9_deaths_period2_forecast.html" width="600px" frameborder="0" style="height:500px"></iframe>
+                        </div>
+                        <p>Your comment goes here...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+    <section id="features" class="container mt-5">
+        <div class="row">
+    wykres interaktywny + tabela, poprawic tabele, ma byc najmniejsza najweksza wartosc bezwzgledna!
+        </div>
+    </section>
+
+<footer class="bg-dark text-white text-center py-3">
+        <p>Marta Solarz, MISMaP UW</p>
+</footer>
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</html>
