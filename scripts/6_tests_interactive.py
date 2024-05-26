@@ -16,12 +16,12 @@ fig = go.Figure()
 
 fig.add_trace(go.Scatter(x=df_monthly.index, y=df_monthly['total_tests'],
                          mode='lines+markers',
-                         name='Number of total tests performed',
+                         name='Total tests performed',
                          line=dict(color='blue', width=2)))
 
 fig.add_trace(go.Scatter(x=df_monthly.index, y=df_monthly['new_tests'],
                          mode='lines+markers',
-                         name='Number of newly performed tests',
+                         name='Newly tests performed',
                          line=dict(color='green', width=2)))
 
 fig.add_trace(go.Scatter(x=df_monthly.index, y=df_monthly['positive_rate'],

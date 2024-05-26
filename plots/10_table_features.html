@@ -11,17 +11,17 @@
         }
         th, td {
             border: 1px solid #dddddd;
-            text-align: right;
+            text-align: center;
             padding: 8px;
         }
         th {
             background-color: #f2f2f2;
         }
         .min-value {
-            background-color: red;
+            background-color: #ff9393;
         }
         .max-value {
-            background-color: green;
+            background-color: #96f896;
         }
     </style>
 </head>
@@ -75,9 +75,9 @@
             // Initialize 2D array to store min/max class names
             const classMatrix = Array.from({ length: rowCount }, () => Array(colCount).fill(''));
 
-            // Find min and max in each column
+            // Find min and max in each column based on absolute values
             for (let col = 0; col < colCount; col++) {
-                let colValues = keys.map(key => data[key][col]);
+                let colValues = keys.map(key => Math.abs(data[key][col]));
                 let minIndex = colValues.indexOf(Math.min(...colValues));
                 let maxIndex = colValues.indexOf(Math.max(...colValues));
                 classMatrix[minIndex][col] = 'min-value';
@@ -97,10 +97,6 @@
         </script>
     </tbody>
 </table>
-
-</body>
-</html>
-
 
 </body>
 </html>
