@@ -1,5 +1,3 @@
-# Reproduction rate comparison between Portugal and Poland - static plot
-
 import matplotlib.pyplot as plt
 import pandas as pd
 import seaborn as sns

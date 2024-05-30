@@ -130,7 +130,7 @@ axs[0].plot(overlap_forecast['ds'], overlap_forecast['yhat1'], label='Forecast 2
 axs[0].plot(overlap_forecast2['ds'], overlap_forecast2['yhat1'], label='Forecast 2023-2024 (overlap)', color='red', alpha=0.6)
 axs[0].plot(future_forecast['ds'], future_forecast['yhat1'], label='Forecast 2020-2022', color='orange')
 axs[0].plot(future_forecast2['ds'], future_forecast2['yhat1'], label='Forecast 2023-2024', color='red')
-axs[0].set_title('Forecast of New COVID-19 Deaths in Portugal (NeuralProphet)')
+axs[0].set_title('Forecast of New COVID-19 Cases in Portugal (NeuralProphet)')
 axs[0].set_xlabel('Date')
 axs[0].set_ylabel('New Cases')
 axs[0].grid(True, which='both', linestyle='--', lw=0.5)

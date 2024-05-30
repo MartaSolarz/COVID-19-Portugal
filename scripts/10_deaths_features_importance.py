@@ -15,7 +15,7 @@ import plotly.io as pio
 
 df = pd.read_csv('../data/portugal.csv')
 
-data = df[['date', 'new_cases', 'new_deaths', 'reproduction_rate', 'icu_patients', 'hosp_patients', 'new_tests', 'positive_rate', 'people_vaccinated', 'people_fully_vaccinated', 'total_boosters', 'stringency_index', 'excess_mortality_cumulative_absolute', 'excess_mortality_cumulative', 'excess_mortality']]
+data = df[['date', 'new_cases', 'new_deaths', 'reproduction_rate', 'icu_patients', 'hosp_patients', 'new_tests', 'positive_rate', 'people_vaccinated', 'people_fully_vaccinated', 'total_boosters', 'stringency_index']]
 
 data['date'] = pd.to_datetime(data['date'])
 data.set_index('date', inplace=True)
@@ -108,11 +108,11 @@ for name, model in models.items():
 
 feature_importances_df = pd.DataFrame(feature_importances, index=X.columns)
 
-feature_importances_df.to_csv('../data/10_feature_importances.csv')
+feature_importances_df.to_csv('../plots/10_feature_importances.csv')
 
 results_df = pd.DataFrame(results, index=['MAE', 'RMSE', 'R2'])
 
-results_df.to_csv('../data/10_results.csv')
+results_df.to_csv('../plots/10_results.csv')
 
 plt.figure(figsize=(14, 7))
 plt.plot(y_test.values, label='True Values', color='black', linewidth=2)

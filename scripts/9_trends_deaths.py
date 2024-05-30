@@ -24,8 +24,8 @@ nm1 = NeuralProphet(n_changepoints=190,
                     weekly_seasonality=False,
                     changepoints_range=0.95,
                     seasonality_mode='additive',
-                     trend_reg=0.3,
-                     seasonality_reg=0.2 )
+                    trend_reg=0.3,
+                    seasonality_reg=0.2 )
 
 nm_result = nm1.fit(period1, freq='D')
 future = nm1.make_future_dataframe(period1, periods=1500, n_historic_predictions=len(period1))

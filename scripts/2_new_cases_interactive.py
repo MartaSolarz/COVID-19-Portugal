@@ -4,6 +4,8 @@ import plotly.graph_objects as go
 df = pd.read_csv('../data/portugal.csv', parse_dates=['date'])
 df.set_index('date', inplace=True)
 
+df = df[df['new_cases'] > 0]
+
 fig = go.Figure()
 
 fig.add_trace(go.Scatter(x=df.index, y=df['new_cases'], mode='lines+markers',
@@ -16,7 +18,7 @@ fig.add_annotation(x=max_date, y=max_value,
                    text=f'Max number of new cases<br>Date: {max_date.strftime("%d.%m.%Y")}')
 
 fig.update_layout(
-    title='Histogram of new COVID-19 cases in Portugal',
+    title='New COVID-19 cases in Portugal',
     xaxis_title='Date',
     yaxis_title='New cases',
     yaxis=dict(tickmode='array',

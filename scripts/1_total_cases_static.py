@@ -5,6 +5,9 @@ import seaborn as sns
 df = pd.read_csv('../data/portugal.csv', index_col='date', parse_dates=True)
 df_pl = pd.read_csv('../data/poland.csv', index_col='date', parse_dates=True)
 
+df = df[df['total_cases'] > 0]
+df_pl = df_pl[df_pl['total_cases'] > 0]
+
 sns.set_style("whitegrid")
 
 plt.figure(figsize=(10, 6))

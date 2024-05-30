@@ -1,5 +1,3 @@
-# Reproduction rate comparison between Portugal and Poland - interactive plot
-
 import pandas as pd
 import plotly.graph_objects as go
 
